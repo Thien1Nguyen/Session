@@ -1,0 +1,55 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.NumDisPlay{
+  font-size: 40pt;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.BtnBox{
+  width: 800px;
+  margin: 10% 25%;
+  font-size: larger;
+}
+.Btn1{
+  background-color: rgb(255,248,103);
+  width: 300px;
+  height: 150px;
+  margin: 10px;
+}
+
+.Btn2{
+  background-color: rgb(44,82,179);
+  width: 300px;
+  height: 150px;
+  margin: 10px;
+}
+.Btn3{
+  background-color: rgb(251,47,56);
+  width: 300px;
+  height: 150px;
+  margin: 10px;
+}
+.Btn4{
+  background-color: rgb(157, 195, 132);
+  width: 300px;
+  height: 150px;
+  margin: 10px;
+}

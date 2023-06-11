@@ -1,0 +1,35 @@
+@model MathSwitch;
+@{
+    ViewData["Title"] = "DashBoard Page";
+}
+
+<h1>Welcome @Context.Session.GetString("UserName") </h1>
+
+<div>
+    <p class="NumDisPlay">@Context.Session.GetInt32("UserNum")</p>
+</div>
+
+<div class="BtnBox">
+    <div class="d-flex">
+        <form asp-controller="Home" asp-action="Math" method="POST">
+            <input type="hidden" asp-for="State" value="plus">
+            <button class="Btn1">+1 </button>
+        </form>
+        <form asp-controller="Home" asp-action="Math" method="POST">
+            <input type="hidden" asp-for="State" value="minus">
+            <button class="Btn2">-1 </button>
+        </form>
+    </div>
+
+    <div class="d-flex">
+        <form asp-controller="Home" asp-action="Math" method="POST">
+            <input type="hidden" asp-for="State" value="time2">
+            <button class="Btn3"> x2 </button>
+        </form>
+
+        <form asp-controller="Home" asp-action="Math" method="POST">
+            <input type="hidden" asp-for="State" value="rand">
+            <button class="Btn4"> + Random </button>
+        </form>
+    </div>
+</div>
