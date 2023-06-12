@@ -22,8 +22,14 @@ public class HomeController : Controller
     [HttpPost("login")]
     public IActionResult Login(string UserName)
     {
+        if(UserName == null){
+            ViewBag.Error = "Please enter a name";
+            return View("Index",ViewBag.Error);
+        }
+
         HttpContext.Session.SetString("UserName", UserName);
         HttpContext.Session.SetInt32("UserNum", 42);
+        
         return Redirect("/dashboard");
     }
 
